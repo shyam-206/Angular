@@ -13,7 +13,7 @@ export class AppComponent {
 
   @ViewChild(PostComponent) childComponent !: PostComponent;
   constructor(){
-    console.log(this.childComponent)
+    //console.log(this.childComponent)
   }
 
   UserName : string = '';
@@ -24,8 +24,8 @@ export class AppComponent {
   }
 
   ngAfterViewInit(){
-    console.log(this.childComponent)
-    this.message = this.childComponent.childMessage
+    //console.log(this.childComponent)
+    //this.message = this.childComponent.childMessage
   }
 
   recivedMessage(msg : string){
