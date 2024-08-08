@@ -1,0 +1,30 @@
+<p class="text-center fs-3 fw-bold text-primary">Hello</p>
+
+
+<!-- two way binding -->
+<!-- <div  class="d-flex justify-content-center">
+  <input type="text" [(ngModel)] ="UserName" (keyup.enter)="OnKeyUp()">
+</div>
+<p class="text-center mt-2">Your text after enter input field</p>
+<p class="text-center text-danger fs-2">{{message}}</p> -->
+<!-- <Navbar></Navbar>
+<app-post [fromParent]="parentMessage" (MessageEvent)="recivedMessage($event)"></app-post> -->
+
+
+
+<div  class="form-area">
+  <h1>Post Form</h1>
+  <div class="form-group">
+    <input type="text" placeholder="Post Title" [(ngModel)]="postTitle">
+  </div>
+  
+  <div class="form-group">
+    <textarea type="text" cols placeholder="Post Details" [(ngModel)]="postDetail"></textarea>
+  </div>  
+</div>
+
+<div>
+  <h1>Post Detail</h1>
+  <div>Post Title : {{postTitle}}</div>
+  <div>Post Details :{{postDetail}}</div>
+</div>

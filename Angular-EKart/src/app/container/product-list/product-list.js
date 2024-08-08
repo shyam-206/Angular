@@ -1,0 +1,65 @@
+
+export const products = [
+    {
+      id: 1,
+      name: "Nike React Infinity Run Flyknit",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      brand: "NIKE",
+      gender: "MEN",
+      category: "RUNNING",
+      size: [6, 7, 8, 9, 10],
+      color: ["White", "Blue", "Black"],
+      price: 160,
+      discountPrice:140,
+      is_in_inventory: true,
+      items_left: 3,
+      imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuDqILlzw0DqIgjPPSzvdZQEoZ-tmqpyznSQ&s",
+      slug: "nike-react-infinity-run-flyknit"
+    },
+    {
+      id: 2,
+      name: "Nike React Miler",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      brand: "NIKE",
+      gender: "MEN",
+      category: "RUNNING",
+      size: [6, 7, 8, 9, 10],
+      color: ["White", "Blue", "Black"],
+      price: 130,
+      is_in_inventory: false,
+      items_left: 3,
+      imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt63cwizLlS__XfkeNBCreo1VNoDdZklgny14Vqm13y1jCeYERM6n6g4ckDTeX2Gh_51o&usqp=CAU",
+      slug: "nike-react-miler"
+    },
+    {
+      id: 3,
+      name: "Nike Air Zoom Pegasus 37",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      brand: "NIKE",
+      gender: "WOMEN",
+      category: "RUNNING",
+      size: [6, 7, 8, 9, 10],
+      color: ["White", "Blue", "Black", "Brown", "Red"],
+      price: 120,
+      is_in_inventory: true,
+      items_left: 3,
+      imageURL: "../../../assets/Images/nike-air-zoom-pegasus-37.jpg",
+      slug: "nike-air-zoom-pegasus-37"
+    },
+    {
+      id: 4,
+      name: "Nike Joyride Run Flyknit",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      brand: "NIKE",
+      gender: "WOMEN",
+      category: "RUNNING",
+      size: [6, 7, 8, 9, 10],
+      color: ["White", , "Brown", "Red"],
+      price: 180,
+      discountPrice:140,
+      is_in_inventory: false,
+      items_left: 3,
+      imageURL: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
+      slug: "nike-joyride-run-flyknit"
+    }
+  ];
