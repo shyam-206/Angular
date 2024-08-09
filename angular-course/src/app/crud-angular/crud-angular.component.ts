@@ -14,7 +14,6 @@ export class CrudAngularComponent {
     userArray : Array<any> = []
     
     SaveData(){
-      debugger
       if(this.name !== "" && this.address  !== ""  && this.address !== ""){
         let user = this.userArray.find(m => m.email === this.email)
         if(user){
@@ -49,4 +48,18 @@ export class CrudAngularComponent {
         this.email = user.email
         this.address = user.address
     }
+
+
+
+    //angular pipes
+    text : string = "Hello"
+    price : number = 33.95
+    today : Date = new Date()
+
+    postObj : object = {
+      id : 1,
+      postTitle : "post 1"
+    }
+
+    postArray : Array<string> = ["p1",'p2','p3','p4','p5']
 }

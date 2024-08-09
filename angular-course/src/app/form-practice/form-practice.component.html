@@ -1,0 +1,100 @@
+<div class="container">
+  <!-- <form action="" #form="ngForm" (submit)="onSubmitData(form)" novalidate>
+    <div class="mb-3">
+      <label for="fullName" class="form-label">Name</label>
+      <input
+        type="text"
+        name="fullName"
+        id=""
+        class="form-control"
+        placeholder="Full Name"
+        aria-describedby="helpId"
+        ngModel
+        #fullName="ngModel"
+        [ngClass]="{ 'is-invalid': fullName.touched &&fullName.invalid }"
+        required
+        minlength="5"   
+        maxlength="10"
+      />
+
+      <div class="alert alert-danger mt-2" *ngIf="fullName.touched && fullName.invalid">
+
+        <div *ngIf="fullName.errors?.['required']">The Full Name is required...</div>
+        
+        <div *ngIf="fullName.errors?.['minlength']">The Full Name alphabets must be more than 5</div>
+      </div>
+    </div>  
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id=""
+        aria-describedby="emailHelpId"
+        placeholder="abc@mail.com"
+        ngModel
+        #email = "ngModel"
+        required
+        [ngClass]="{ 'is-invalid': email.touched && email.invalid}"
+      />
+
+      <div class="alert alert-danger mt-2" *ngIf="email.touched && email.invalid">
+
+        <div *ngIf="email.errors?.['required']">The email is required...</div>        
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="address" class="form-label"></label>
+      <textarea
+        class="form-control"
+        name="address"
+        id=""
+        rows="3"
+        ngModel
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success text-center">Submit</button>
+  </form> -->
+
+
+
+  <div class="h3 text-center">Reactive Forms </div>
+  <div class="mt-2">
+    <form [formGroup] = "form">
+
+        <div class="form-group mt-2">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username" formControlName="username">
+
+            <div class="alert alert-danger mt-2" *ngIf="fc.username.touched && fc.username.invalid">
+
+                <div *ngIf="fc.username.errors?.['required']">The User Name is required...</div>
+                
+                <div *ngIf="fc.username.errors?.['minlength']">The User Name alphabets must be more than 5</div>
+
+                <div *ngIf="fc.username.errors?.['noSpaceValidator']">Username can't contain spaces...</div>
+
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" formControlName="password">
+
+            <div class="alert alert-danger mt-2" *ngIf="fc.password.touched && fc.password.invalid">
+
+                <div *ngIf="fc.password.errors?.['required']">The Password is required...</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="form-group mt-2">
+            <button class="btn btn-primary" type="submit">submit</button>
+        </div>
+    </form>
+  </div>
+</div>

@@ -1,5 +1,3 @@
-<p class="text-center fs-3 fw-bold text-primary">Hello</p>
-
 
 <!-- two way binding -->
 <!-- <div  class="d-flex justify-content-center">
@@ -29,4 +27,20 @@
   <div>Post Details :{{postDetail}}</div>
 </div> -->
 
-<app-crud-angular></app-crud-angular>
+<!-- in this component you will find a crud and angular pipe -->
+<!-- <app-crud-angular></app-crud-angular> -->
+
+<!-- in this component implement of the service and how to used it -->
+ <!-- <app-post-service></app-post-service> -->
+
+ <form-practice></form-practice>
+
+<div class="container mt-4">
+
+  <div>Onclick router will render the method</div>
+
+  <button routerLink="/" class="btn btn-primary mx-2">Home</button>
+  <button routerLink="/posts" class="btn btn-primary">Posts</button>
+  
+  <router-outlet></router-outlet>
+</div>
