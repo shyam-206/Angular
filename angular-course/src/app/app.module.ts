@@ -12,6 +12,7 @@ import { PostServiceComponent } from './post-service/post-service.component';
 import { PostService } from './Services/post.service';
 import { FormPracticeComponent } from './form-practice/form-practice.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularRxjsComponent } from './angular-rxjs/angular-rxjs.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PostListComponent,
     CrudAngularComponent,
     PostServiceComponent,
-    FormPracticeComponent
+    FormPracticeComponent,
+    AngularRxjsComponent
   ],
   imports: [
     BrowserModule,

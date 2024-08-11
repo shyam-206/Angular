@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { PostComponent } from './post/post.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,8 @@ export class AppComponent {
   parentMessage : string = "Input From Parent to Child"
 
   @ViewChild(PostComponent) childComponent !: PostComponent;
-  constructor(){
-    //console.log(this.childComponent)
-  }
+  
+  constructor(){}
 
   UserName : string = '';
   OnKeyUp(){

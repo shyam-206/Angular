@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { noSpace } from '../validators/nospace.validators';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class FormPracticeComponent {
 
   form : any
 
-  constructor(fb : FormBuilder){
+  constructor(fb : FormBuilder , private router : Router){
     this.form = fb.group({
       username : ['',[Validators.required,Validators.minLength(5),noSpace.noSpaceValidations]],
       password : ['',Validators.required]
@@ -27,5 +28,9 @@ export class FormPracticeComponent {
     console.log(f.value)
   }
 
+
+  OnClickNavigateToPosts(){
+    this.router.navigate(["/posts"])
+  }
 
 }
