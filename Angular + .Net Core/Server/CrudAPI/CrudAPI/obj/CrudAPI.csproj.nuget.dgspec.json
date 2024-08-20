@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Shyam Dhokiya\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj": {}
+    "C:\\Shyam Dhokiya\\Angular\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj": {}
   },
   "projects": {
-    "C:\\Shyam Dhokiya\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj": {
+    "C:\\Shyam Dhokiya\\Angular\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Shyam Dhokiya\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj",
+        "projectUniqueName": "C:\\Shyam Dhokiya\\Angular\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj",
         "projectName": "CrudAPI",
-        "projectPath": "C:\\Shyam Dhokiya\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj",
+        "projectPath": "C:\\Shyam Dhokiya\\Angular\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj",
         "packagesPath": "C:\\Users\\sit463\\.nuget\\packages\\",
-        "outputPath": "C:\\Shyam Dhokiya\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\obj\\",
+        "outputPath": "C:\\Shyam Dhokiya\\Angular\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sit463\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VCFO0sJbRf6QtOA3zaUegBdfRFrXUgqg76JFWqRJBbwUOunF9CH1auBdP6+A0I+aCspJPm7gZNq+kHLgMaspvw==",
+  "dgSpecHash": "+GdpI00ZLjrgSSC87Z9Q4H/aO79pFLA4KWCd7XKHWx+tsYGfPhwU7PMzoO1iHk4APrPG8cySETZMGCr7OJMUXg==",
   "success": true,
-  "projectFilePath": "C:\\Shyam Dhokiya\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj",
+  "projectFilePath": "C:\\Shyam Dhokiya\\Angular\\Angular + .Net Core\\Server\\CrudAPI\\CrudAPI\\CrudAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sit463\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sit463\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
