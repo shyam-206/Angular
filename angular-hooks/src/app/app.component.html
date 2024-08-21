@@ -1,5 +1,17 @@
 <div class="container">
   <input type="text" #inputEl>
   <button (click)="onBtnClicked(inputEl)">Submit</button>
-  <app-demo [message]="inputVal"></app-demo>
-</div>
+  <app-demo [message]="inputVal" *ngIf="toDestroy">
+    <p #temp>User has entered following text : {{ inputVal }}</p>
+  </app-demo>
+  <br><br>
+
+  <button (click)="DestroyComponent()">Click Destroyed</button>
+</div> 
+
+<!-- 
+<app-template >
+  This is called from app.html and used by the ng-content
+</app-template> -->
+
+<!-- <app-parent></app-parent> -->

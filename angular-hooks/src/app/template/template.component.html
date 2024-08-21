@@ -1,0 +1,35 @@
+<p>template works!</p>
+
+<!-- ng template -->
+<div class="container">
+  <h2>Learn NG Template</h2>
+  <!-- Declare with the ref -->
+  <ng-template #myTemplate>
+    <h3>This is a template</h3>
+    <p>This is an example paragraph to understand ng-template</p>
+  </ng-template>
+
+  <!-- Use the template by using the ngngTemplateOutlet -->
+  <!-- And by the ref inside the div the ng template code will rendering -->
+  <ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+
+  <!-- ng container -->
+  <!-- special angular element hold the structural directives without adding new element -->
+   <hr>
+   <h4>This is example of ng-container with event binding</h4>
+   <ng-container *ngIf="toggleBtn; else toggleOff">
+    <p>The Toggle is ON</p>
+   </ng-container>
+   <ng-template #toggleOff>
+    <p>The Toggle is OFF</p>
+   </ng-template>
+   <button class="btn btn-success" (click)="onToggle()">Click</button>
+
+
+   <!-- When you want to render something dynamically and differnent component inside data then used the ng-content -->
+   <h4>This is example of ng-content </h4>
+   <span class="border border-1 p-2 text-primary bg-primary-subtle">
+       <ng-content></ng-content>
+   </span>
+   <p class="mt-2">Upper Description will be the dynamically rendered</p>
+</div>

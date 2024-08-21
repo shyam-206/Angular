@@ -9,6 +9,9 @@ export class AppComponent {
   title = 'angular-hooks';
 
   inputVal : string = ''
+  // inputVal : string[] = ['Hello','Hi There',]
+
+  toDestroy : boolean = true
 
   constructor(){
     console.log("App Component constructor is called")
@@ -16,6 +19,19 @@ export class AppComponent {
 
   onBtnClicked(inputEl : HTMLInputElement){
     this.inputVal = inputEl.value
-    console.log(this.inputVal)
+    // this.inputVal.push(inputEl.value)
+    //console.log(this.inputVal)
+  }
+
+  ngAfterViewInit(){
+    console.log("ngAfterViewInit hook of AppComponent called")
+  }
+
+  ngAfterViewChecked(){
+    console.log("ngAfterViewChecked hook of AppComponent called")
+  }
+
+  DestroyComponent(){
+    this.toDestroy = ! this.toDestroy
   }
 }
