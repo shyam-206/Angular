@@ -25,4 +25,11 @@ export class UserListComponent {
    showUseDetails(user : User){
       this.userService.OnShowUserDetails(user)
    }  
+
+   EditProfile(user : User){
+    let object = this.userService.GetUserByName(user)
+    console.log(object)
+   }
+
+   
 }

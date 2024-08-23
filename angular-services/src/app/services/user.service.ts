@@ -35,4 +35,12 @@ export class UserService {
   OnShowUserDetails(user : User){
     this.OnUserDetailsClicked.emit(user)
   }
+
+  GetUserByName(user : User){
+    let object = this.users.find(u => u.name === user.name)
+    return object
+  }
+
+  
+
 }
