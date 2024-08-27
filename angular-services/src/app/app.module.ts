@@ -14,6 +14,10 @@ import { SubscribeService } from './services/subscribe.service';
 import { UserService } from './services/user.service';
 import { LoggerService } from './services/logger.service';
 import { UserDetailComponent } from './header/admin/user-detail/user-detail.component';
+import { NewTaskComponent } from './new-task/new-task.component';
+import { ShowTaskComponent } from './show-task/show-task.component';
+import { SubjectComponent } from './subject/subject.component';
+import { UnsbscribeComponent } from './unsbscribe/unsbscribe.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { UserDetailComponent } from './header/admin/user-detail/user-detail.comp
     HeroComponent,
     AdminComponent,
     UserListComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    NewTaskComponent,
+    ShowTaskComponent,
+    SubjectComponent,
+    UnsbscribeComponent
   ],
   imports: [
     BrowserModule,
