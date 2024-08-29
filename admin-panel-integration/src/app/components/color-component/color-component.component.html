@@ -1,0 +1,8 @@
+<div class="col-lg-6 mb-4" *ngFor="let color of arrayOfColorPalette">
+    <div class="card text-white shadow" [ngStyle]="{'background-color': color.colorCode}">
+        <div class="card-body">
+            {{color.colorName}}
+            <div class="text-white-50 small">{{color.colorCode}}</div>
+        </div>
+    </div>
+</div>
