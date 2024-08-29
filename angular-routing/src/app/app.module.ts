@@ -17,6 +17,14 @@ import { TestimonyComponent } from './pages/home/testimony/testimony.component';
 import { ServicesComponent } from './pages/home/services/services.component';
 import { ContactUsComponent } from './pages/home/contact-us/contact-us.component';
 import { CourseDetailComponent } from './components/courses/course-detail/course-detail.component';
+import { LoginComponent } from './components/login/login.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
+import { UserService } from './services/user.service';
+import { CourseService } from './services/course.service';
+import { ServicesService } from './services/services.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,13 +41,16 @@ import { CourseDetailComponent } from './components/courses/course-detail/course
     TestimonyComponent,
     ServicesComponent,
     ContactUsComponent,
-    CourseDetailComponent
+    CourseDetailComponent,
+    LoginComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthGuardService,AuthService,UserService,CourseService,ServicesService],
   bootstrap: [AppComponent],
   exports : [HeaderComponent]
 })
