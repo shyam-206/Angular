@@ -6,62 +6,104 @@ import { first } from 'rxjs';
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
-  styleUrls: ['./reactive-form.component.css']
+  styleUrls: ['./reactive-form.component.css'],
 })
+export class ReactiveFormComponent {
+  formStatus: string = '';
+  formdata: any = {};
+  address : any = {}
 
-export class ReactiveFormComponent{
+  isSubmitted : boolean = false
 
-  formStatus : string = ""
+  reactiveForm: FormGroup;
 
-  reactiveForm : FormGroup
-
-  ngOnInit(){
+  ngOnInit() {
     this.reactiveForm = new FormGroup({
-      firstname : new FormControl(null , [Validators.required,CustomValidators.noSpaceAllowed]),
-      lastname : new FormControl(null ,[Validators.required,CustomValidators.noSpaceAllowed]),
-      email : new FormControl(null , [Validators.required,Validators.email,CustomValidators.noSpaceAllowed]),
-      username : new FormControl(null ,Validators.required,CustomValidators.checkUserName),
-      dob : new FormControl(null),
-      gender : new FormControl('male'),
+      firstname: new FormControl(null, [
+        Validators.required,
+        CustomValidators.noSpaceAllowed,
+      ]),
+      lastname: new FormControl(null, [
+        Validators.required,
+        CustomValidators.noSpaceAllowed,
+      ]),
+      email: new FormControl(null, [
+        Validators.required,
+        Validators.email,
+        CustomValidators.noSpaceAllowed,
+      ]),
+      username: new FormControl(
+        null,
+        Validators.required,
+        CustomValidators.checkUserName
+      ),
+      dob: new FormControl(null),
+      gender: new FormControl('male'),
       //formGroup is used to store the key value as object
-      address : new FormGroup({
-        street : new FormControl(null,Validators.required),
-        country : new FormControl('India',Validators.required),
-        city : new FormControl(null),
-        region : new  FormControl(null),
-        postal : new FormControl(null,Validators.required)
+      address: new FormGroup({
+        street: new FormControl(null, Validators.required),
+        country: new FormControl('India', Validators.required),
+        city: new FormControl(null),
+        region: new FormControl(null),
+        postal: new FormControl(null, Validators.required),
       }),
       //FormArray used to store to element
-      skills : new FormArray([ 
-        new FormControl(null ,Validators.required),
-      ]),
-      experience : new FormArray([
-        
-      ])
-    }) 
-    
-    
+      skills: new FormArray([new FormControl(null, Validators.required)]),
+      experience: new FormArray([]),
+    });
+
     this.reactiveForm.statusChanges.subscribe((status) => {
-      console.log(status)
+      console.log(status);
       this.formStatus = status;
     });
   }
 
-  onSubmitForm(){
-    
-      console.log(this.reactiveForm)
-    
-  }
+  onSubmitForm() {
+    console.log(this.reactiveForm);
 
+    this.formdata = this.reactiveForm.value;
+    console.log(this.formdata.firstname, this.formdata.lastname)
+
+    this.isSubmitted = true
+
+    this.reactiveForm.reset()
+
+    // this.reactiveForm.reset({
+    //   firstname: null,
+    //   lastname: null,
+    //   email: null,
+    //   username: null,
+    //   dob: null,
+    //   gender: 'male',
+    //   address: {
+    //     street: null,
+    //     country: 'India',
+    //     city: null,
+    //     region: null,
+    //     postal: null,
+    //   },
+    //   skills: [null],
+    //   experience: [],
+    // });
+
+    this.reactiveForm.patchValue({
+      gender : 'male',
+      address : {
+        country : 'India'
+      }
+    })
+  }
 
   //add the form control dynamically
-  AddSkill(){ 
-    (<FormArray>this.reactiveForm.get('skills')).push(new FormControl(null,Validators.required))
+  AddSkill() {
+    (<FormArray>this.reactiveForm.get('skills')).push(
+      new FormControl(null, Validators.required)
+    );
   }
 
-  DeleteSkill(index : number){
-    const controls = <FormArray>this.reactiveForm.get('skills')
-    controls.removeAt(index)
+  DeleteSkill(index: number) {
+    const controls = <FormArray>this.reactiveForm.get('skills');
+    controls.removeAt(index);
   }
 
   // for the get experience
@@ -70,37 +112,36 @@ export class ReactiveFormComponent{
   }
 
   addExperience() {
-    this.experience.push(new FormGroup({
-      company: new FormControl(null),
-      position: new FormControl(null),
-      totalExp: new FormControl(null),
-      start: new FormControl(null),
-      end: new FormControl(null)
-    }));
+    this.experience.push(
+      new FormGroup({
+        company: new FormControl(null),
+        position: new FormControl(null),
+        totalExp: new FormControl(null),
+        start: new FormControl(null),
+        end: new FormControl(null),
+      })
+    );
   }
-  
+
   removeExperience(index: number) {
     this.experience.removeAt(index);
   }
 
-
-  GenerateUsername(){
+  GenerateUsername() {
     let username = '';
-    const fName : string= this.reactiveForm.get('firstname').value;
-    const lName : string= this.reactiveForm.get('lastname').value;
-    const dob : string= this.reactiveForm.get('dob').value;
-    console.log(fName,lName,dob)
-    if(fName.length >= 3){
+    const fName: string = this.reactiveForm.get('firstname').value;
+    const lName: string = this.reactiveForm.get('lastname').value;
+    const dob: string = this.reactiveForm.get('dob').value;
+    console.log(fName, lName, dob);
+    if (fName.length >= 3) {
       username += fName.slice(0, 3);
-    }
-    else {
+    } else {
       username += fName;
     }
 
-    if(lName.length >= 3){
+    if (lName.length >= 3) {
       username += lName.slice(0, 3);
-    }
-    else {
+    } else {
       username += lName;
     }
 
@@ -134,8 +175,8 @@ export class ReactiveFormComponent{
     this.reactiveForm.patchValue({
       username: username,
       address: {
-        city: 'New Delhi'
-      }
-    })
-}
+        country : 'India'
+      },
+    });
+  }
 }

@@ -27,7 +27,7 @@ export class TemplateFormComponent {
   submittedData = {
     firstname: '',
     lastname: '',
-    dob: null,
+    dob: null,    
     Email: '',
     gender: '',
     country: '',
